@@ -61,7 +61,7 @@ session    include      postlogin
 -session   optional     pam_ck_connector.so
 ```
 
-- Далее заходим в файл ```nano /etc/security/time.conf``` и добавляем в конце файла строку ```*;*;test_user;Wk```
+- Далее заходим в файл ```nano /etc/security/time.conf``` и добавляем в конце файла строку, запретив вход по выходным ```*;*;test_user;Wk```
 - Создаем пользователя командой ```useradd test_user``` и задаем ему пароль, например, 123456 ```passwd test_user```
 - Пытаемся зайти сегодня, в среду, когда у нас работает правило ```ssh test_user@localhost``` и получаем:
 ```
